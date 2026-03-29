@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-headline: "Epilogue", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-primary: #912225;
+  --color-primary-container: #b23a3a;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #745a27;
+  --color-on-secondary: #ffffff;
+  
+  --color-surface: #fdf9f1;
+  --color-on-surface: #1c1c17;
+  --color-on-surface-variant: #584140;
+  
+  --color-surface-container-low: #f7f3eb;
+  --color-surface-container: #f1ede5;
+  --color-surface-container-high: #ece8e0;
+  --color-surface-container-highest: #e6e2da;
+
+  --radius-none: 0px;
+  --radius-full: 9999px;
+}
+
+@layer utilities {
+  .editorial-shadow {
+    box-shadow: 0 12px 40px rgba(145, 34, 37, 0.04);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-primary/20 selection:text-primary;
+  }
+}
